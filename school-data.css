@@ -1,0 +1,92 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fefce8;
+  margin: 0;
+  padding: 0;
+}
+
+.data-hero {
+  background-image: url('school-data-banner.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.data-hero .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.data-hero h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #facc15;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.data-hero p {
+  font-size: 1.3em;
+  color: #fefce8;
+}
+
+.data-content {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+  color: #333;
+  line-height: 1.8;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.data-content h2 {
+  color: #8a1e1e;
+  margin-top: 30px;
+  font-size: 2em;
+  border-bottom: 2px solid #facc15;
+  padding-bottom: 10px;
+}
+
+.data-content ul {
+  padding-left: 20px;
+}
+
+.data-content ul li {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.data-content ul li::before {
+  content: "✔️";
+  position: absolute;
+  left: -20px;
+  color: #8a1e1e;
+}
+
+.site-footer {
+  background-color: #680606;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+.section-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

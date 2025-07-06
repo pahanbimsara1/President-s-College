@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffdf5;
+}
+
+.site-header {
+  background-color: #8a1e1e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background-color: #facc15;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  height: 100%;
+  width: 250px;
+  background-color: #8a1e1e;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  transition: right 0.4s ease;
+  z-index: 1000;
+}
+
+.side-nav.show {
+  right: 0;
+}
+
+.side-nav-link {
+  padding: 15px 25px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid #facc15;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.side-nav-link:hover {
+  background-color: #facc15;
+  color: #740808;
+  transform: translateX(-5px);
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomFade {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.gallery-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 20px;
+  animation: fadeInDown 1s ease-out both;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  color: #8a1e1e;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  animation: zoomFade 1s ease-in-out;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+footer {
+  background-color: #8a1e1e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+.gallery-grid a {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  animation: fadeInZoom 1s ease forwards;
+  opacity: 0;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 10px;
+}
+
+
+.gallery-grid a:hover .gallery-img {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(255, 204, 0, 0.4);
+}
+
+
+@keyframes fadeInZoom {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+
+.photo-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  color: #fffde7;
+  font-size: 1rem;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+
+.gallery-item:hover .photo-name {
+  opacity: 1;
+  transform: translateY(0);
+}

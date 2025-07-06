@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Events – President's College Minuwangoda</title>
+  <link rel="stylesheet" href="events-style.css" />
+</head>
+<body>
+
+<div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div class="side-nav" id="sideNav">
+  <a href="index.html" class="side-nav-link">Home</a>
+  <a href="school-history.html" class="side-nav-link">School History</a>
+  <a href="school-data.html" class="side-nav-link">School Data</a>
+  <a href="gallery.html" class="side-nav-link">Gallery</a>
+  <a href="achievements.html" class="side-nav-link">Achievements</a>
+  <a href="events.html" class="side-nav-link">Events</a>
+</div>
+
+
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="PCM Logo.jpg" alt="President's College Logo" class="logo" />
+      <h1>President's College Minuwangoda</h1>
+    </div>
+ <div class="news-ticker">
+    <div class="news-label">School News:</div>
+    <div class="news-scroll">
+        <div class="news-content">
+            • 2025(2024)O/L Results will released on 16th July before mid night. Our teachers are looking forward the best results... ㅤㅤㅤㅤ• 2024(2023)A/L Results Released.. Best Results from our students!ㅤㅤㅤㅤ• Nova Quest interschool ICT Competition winners annonced... ㅤㅤㅤㅤ• Children's Day Celebration comming soon on October 1st... ㅤㅤㅤㅤ• Stay tuned for more updates... 
+        </div>
+    </div>
+</div>
+  </header>
+
+  <section class="events-section">
+    <h2>Upcoming Events</h2>
+    <div class="events-container">
+
+      <div class="event-card">
+        <h3>Commerce Day – August 4</h3>
+        <p>A celebration of our students' excellence in the commerce stream with exhibitions and guest talks.</p>
+      </div>
+
+      <div class="event-card">
+        <h3>Nova Quest Prize Giving – Date (Not announced)</h3>
+        <p>Recognizing the talented ICT champions of our interschool Nova Quest competition.</p>
+      </div>
+
+      <div class="event-card">
+        <h3>Children’s Day – October 1st</h3>
+        <p>Special performances, fun games, and activities for our students to enjoy their day!</p>
+      </div>
+
+      <div class="event-card">
+        <h3>Teacher’s Day – October 6th</h3>
+        <p>Special performances, fun games, and activities for our teachers to enjoy their day!</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 President's College. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const sideNav = document.getElementById("sideNav");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      sideNav.classList.toggle("show");
+    });
+  </script>
+
+</body>
+</html>
